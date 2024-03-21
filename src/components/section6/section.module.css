@@ -1,0 +1,127 @@
+.section{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    background-image: url(../../assets/london.png);
+}
+
+.sectionLeft{
+    width: 60%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.miniCloud{
+    position: absolute;
+    bottom: 0;
+}
+
+.sectionRight{
+    width: 40%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 560px;
+    height: 430px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    gap: 20px;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 20px;
+}
+
+.input{
+    width: 80%;
+    height: 55px;
+    background-color: #F8FCFF;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+
+
+.btn{
+    width: 250px;
+    height: 55px;
+    background-color: #B1E2FF;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+.btn a {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-left: 20px;
+}
+
+.send{
+    width: 45px;
+    position: absolute;
+    left: 2%;
+    animation: .5s pulse infinite alternate;
+}
+
+
+@keyframes pulse{
+    from{
+        transform: scale(1.0);
+    }
+    to{
+        transform: scale(0.9);
+    }
+}
+
+.woman{
+    width: clamp(500px, 90%,750px);
+    position: absolute;
+    bottom: 0;
+    transform: translateY(10%);
+}
+
+.title{
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #313131;
+}
+
+.text{
+    color: #7A7A7A;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+@media screen and (max-width: 1150px){
+    .sectionLeft{
+        display: none;
+    }
+
+    .sectionRight{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .section{
+        padding: 5px;
+    }
+}

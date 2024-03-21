@@ -57,12 +57,12 @@ const Header = () => {
         {
             id: Math.random() * Math.random() * 0.54,
             text: 'Новости',
-            url: '',
+            url: '#news',
         },
         {
             id: Math.random() * Math.random() * 0.54,
             text: 'Контакты',
-            url: '',
+            url: '#contact',
         }
     ]
 

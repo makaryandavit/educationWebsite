@@ -100,10 +100,10 @@ const Section2 = () => {
                 }
             </div>
             <img src={RightArrow} className={style.right} alt="" onClick={() => {
-                slider.current.scrollBy(250,0)
+                slider.current.scrollBy(280,0)
             }} />
             <img src={RightArrow} className={style.left} alt="" onClick={() => {
-                slider.current.scrollBy(-250,0)
+                slider.current.scrollBy(-280,0)
             }} />
         </div>
     </section>

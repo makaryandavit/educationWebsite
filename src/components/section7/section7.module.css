@@ -1,0 +1,158 @@
+.section{
+    width: 100%;
+    height: auto;
+    min-height: 65vh;
+    background-image: url(../../assets/lastBack.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tree{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bus{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.inside{
+    max-width: 95%;
+    width: 360px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.part{
+    width: 90%;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 25px;
+    gap: 3px;
+}
+
+.title1{
+    font-size: 20px;
+    color: #313131;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1px;
+}
+
+.text1{
+    font-size: 16px;
+    color: #7A7A7A;
+    font-family: sans-serif;
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+
+
+.btn{
+    width: 220px;
+    height: 50px;
+    background-color: #B1E2FF;
+    border-radius: 25px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(45%);
+}
+
+.btn a{
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.call{
+    animation: .3s pulse infinite alternate;
+}
+
+@keyframes pulse{
+    from{
+        transform: scale(1.0);
+    }
+    to{
+        transform: scale(0.9);
+    }
+}
+
+.title{
+    font-size: 34px;
+    color: #52BFFF;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 8%;
+}
+
+.text{
+    position: absolute;
+    top: 16%;
+    font-size: 20px;
+    color: #7A7A7A;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.top{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media screen and (max-width: 1000px){
+    .bus,.tree{
+        display: none;
+    }
+}

@@ -52,9 +52,11 @@ section{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.bottom:hover .box:not(:hover){
-    transform: scale(0.8);
-    filter: blur(2px);
+@media screen and (min-width: 800px){
+    .bottom:hover .box:not(:hover){
+        transform: scale(0.8);
+        filter: blur(2px);
+    }
 }
 
 .img{
