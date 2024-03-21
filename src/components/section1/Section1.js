@@ -26,7 +26,7 @@ const Section1 = () => {
   ]
 
   return (
-    <section>
+    <section id='uslugi'>
       <div className={style.top}>
         <p className={style.title}>Добро пожаловать в нашу группу <br/> иностранного образования</p>
         <p className={style.text}>Почему мы?</p>

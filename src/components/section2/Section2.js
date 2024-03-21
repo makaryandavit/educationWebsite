@@ -78,7 +78,7 @@ const Section2 = () => {
   ]
 
   return (
-    <section className={style.section}>
+    <section className={style.section} id='universe'>
         <div className={style.top}>
             <p className={style.title}>Университеты</p>
             <p className={style.text}>В нашем каталоге вы найдете более <span className={style.words}>100 университетов</span> из более чем <span className={style.words}>14 стран</span></p>
@@ -100,10 +100,10 @@ const Section2 = () => {
                 }
             </div>
             <img src={RightArrow} className={style.right} alt="" onClick={() => {
-                slider.current.scrollBy(300,0)
+                slider.current.scrollBy(250,0)
             }} />
             <img src={RightArrow} className={style.left} alt="" onClick={() => {
-                slider.current.scrollBy(-300,0)
+                slider.current.scrollBy(-250,0)
             }} />
         </div>
     </section>

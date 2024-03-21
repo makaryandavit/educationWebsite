@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from "./header.module.css";
 
 import Logo from "../../assets/logo.svg";
@@ -12,11 +12,13 @@ const Header = () => {
     const [burger, setBurger] = useState(false);
     const [fixed, setFixed] = useState(false);
 
-    if(burger){
-        document.body.style.overflow = 'hidden'
-    }else{
-        document.body.style.overflow = 'unset'
-    }
+    useEffect(() => {
+        if(burger){
+            document.body.style.cssText = 'overflow: hidden; height: 90vh;'
+        }else{
+            document.body.style.cssText = 'overflow: unset; height: auto;'
+        }
+    },[burger])
 
    window.onscroll = function(){
     if(window.scrollY > 60){
@@ -30,27 +32,27 @@ const Header = () => {
         {
             id: Math.random() * Math.random() * 0.54,
             text: 'Главная',
-            url: '',    
+            url: '#header',    
         },
         {
             id: Math.random() * Math.random() * 0.54,
             text: 'О нас',
-            url: '',
+            url: '#about',
         },
         {
             id: Math.random() * Math.random() * 0.54,
             text: 'Услуги',
-            url: '',
+            url: '#uslugi',
         },
         {
             id: Math.random() * Math.random() * 0.54,
             text: 'Университеты',
-            url: '',
+            url: '#universe',
         },
         {
             id: Math.random() * Math.random() * 0.54,
             text: 'Студенты',
-            url: '',
+            url: '#students',
         },
         {
             id: Math.random() * Math.random() * 0.54,
@@ -73,7 +75,9 @@ const Header = () => {
                     {
                         links.map(item => (
                             <li key={item.id}>
-                                <a className={style.link} href={item.url}>{item.text}</a>
+                                <a onClick={() => {
+                                    setBurger(false)
+                                }} className={style.link} href={item.url}>{item.text}</a>
                             </li>
                         ))
                     }
@@ -92,7 +96,9 @@ const Header = () => {
                             {
                                  links.map(item => (
                                     <li className={style.burgerLi} key={item.id}>
-                                        <a className={style.burgerLink} href={item.url}>{item.text}</a>
+                                        <a onClick={() => {
+                                            setBurger(false)
+                                        }} className={style.burgerLink} href={item.url}>{item.text}</a>
                                     </li>
                                 ))
                             }
@@ -102,7 +108,7 @@ const Header = () => {
                 </div>
             </div>
         </div>
-        <div className={style.inside}>
+        <div className={style.inside} id='header'>
             <p className={style.title}>Грант и контрактное обучение в <span className={style.specialWord}>зарубежных</span> вузах</p>
             <p className={style.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
             <button className={style.btn}>
